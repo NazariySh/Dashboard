@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Popins", sans-serif;
+    
 }
 body{
     position: relative;
     min-height: 100vh;
     width: 100%;
-    overflow: hidden;
+   
     background: rgba(245, 245, 245, 1);
 }
 .sidebar{
@@ -157,4 +158,336 @@ letter-spacing: 0em;
 text-align: left;
 
 }
+main{
+    display: flex;
+    flex-direction: column;
+   
+    padding: 1rem 2rem 2rem 4rem ;
+    padding-left: 8%;
+    transition: all 0.5s ease;
 
+}
+main.active{
+    padding-left: 20%;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 2rem 2rem 2rem;
+}
+header .dash{
+    background-image: url(img/dash.png);
+   background-size: cover;
+   height: 62px;
+width: 308px;
+left: 395px;
+top: 39px;
+border-radius: 2px;
+
+}
+header .input_place{
+    height: 60px;
+width: 415px;
+left: 825px;
+top: 40px;
+border-radius: 15px;
+background-color:  rgba(255, 255, 255, 1);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+
+}
+header .input_place input{
+    outline: none;
+    border: none;
+    font-family: DM Sans;
+font-size: 20px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color: rgba(114, 117, 122, 1);
+z-index: 1
+;
+
+}
+header .input_place i{
+    cursor: pointer;
+    height: 20.01643180847168px;
+width: 20.01643180847168px;
+left: -0.02667236328125px;
+top: -0.02667236328125px;
+border-radius: 0px;
+color: rgba(114, 117, 122, 1);
+
+font-size: 20px;
+z-index: 2;
+}
+header .acount{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+header .acount i{
+    height: 17.57986831665039px;
+width: 24px;
+left: 0px;
+top: 3.21002197265625px;
+border-radius: 0px;
+color:  rgba(114, 117, 122, 1);
+;
+cursor: pointer;
+}
+header .acount .your_photo{
+    background-image: url(img/photo.png);
+    background-size: cover;
+    background-position: center;
+    height: 60px;
+width: 60px;
+left: 1531px;
+top: 40px;
+border-radius: 15px;
+
+}
+header .acount .name_place .name{
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer;
+    
+}
+header .acount .name_place .email{
+    cursor: pointer;
+    font-family: DM Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: left;
+color:  rgba(114, 117, 122, 1);
+;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding:  0 1rem;
+    
+}
+.card{
+    height: 149px;
+width: 340px;
+left: 395px;
+top: 180px;
+border-radius: 20px;
+color: #fff;
+flex:  1 1 10rem;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+
+padding: 2rem;
+}
+.card .icon_place{
+    height: 45px;
+width: 45px;
+left: 435px;
+top: 216px;
+border-radius: 10px;
+
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.card .info{
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    opacity: 1;
+    padding: 0 2rem
+    
+}
+.card .info .sum{
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 39px;
+   
+    text-align: left;
+    
+}
+.card .info p{
+    font-family: monospace;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+
+text-align: left;
+
+}
+.card .icon_place i{
+    font-size: 25px;
+}
+.card1{
+    background: rgba(3, 182, 100, 1);
+
+}
+.card2{
+    background: rgba(1, 190, 255, 1);
+
+}
+.card3{
+    background: rgba(255, 191, 38, 1);
+
+}
+.card4{
+    background: rgba(255, 104, 77, 1);
+
+}
+.transactions_place{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: 60vh;
+    padding:  1rem ;
+
+}
+.transactions_place .transactions{
+    flex: 5 1 15rem;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.transactions_place .statistics{
+    flex: 1 1 15rem;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+}
+.balance_place{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: 40vh;
+}
+.balance_place .balance{
+    flex: 1 1 15rem;
+   
+    border-radius: 20px;
+   
+}
+.balance_place .balance .card{
+    margin-bottom: 2rem;
+    width: 100%;
+    background: linear-gradient(247.35deg, #936DFF 0%, #3ED1FF 100%);
+    border-radius: 20px;
+    min-height: 35vh;
+
+}
+.balance_place .balance .trans{
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    gap: 2rem;
+    min-height: 15vh;
+  
+}
+.balance_place .balance .trans .chart{
+    padding: 1rem;
+    height: 47.99993896484375px;
+width: 228px;
+left: 585px;
+top: 1369px;
+border-radius: 0px;
+background-image: url(img/chart.png);
+background-size: cover;
+
+}
+.balance_place .balance .trans h3{
+    font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+color:  rgba(114, 117, 122, 1);
+;
+
+}
+.balance_place .balance .trans p{
+    font-family: DM Sans;
+font-size: 24px;
+font-weight: 700;
+line-height: 31px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.balance_place .details{
+    background-color: #fff;
+    border-radius: 20px;
+    flex: 1 1 15rem;
+    padding: 2rem;
+    gap: 2rem;
+}
+.balance_place .details h2{
+    font-family: DM Sans;
+font-size: 32px;
+font-weight: 700;
+line-height: 42px;
+letter-spacing: 0em;
+text-align: left;
+
+    
+
+}
+.balance_place .details .boxs{
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem ;
+}
+.balance_place .details .box{
+    padding: 1rem;
+    height: 97px;
+width: 183px;
+left: 1143px;
+top: 1194px;
+border-radius: 10px;
+
+    flex: 1 1 8rem;
+    background: rgba(245, 245, 245, 1);
+
+}
+.balance_place .details p{
+    font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.balance_place .activity{
+    background-color: #fff;
+    border-radius: 20px;
+    flex: 1 1 15rem;
+}
+.myChart{
+    width: 300px;
+    height: 300px;
+}

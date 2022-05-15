@@ -8,15 +8,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <main>
+   
     <section class="sidebar" id="sidebar">
         <div class="logo_content">
             <div class="logo">
                 <img src="img/logo.png" alt="">
-                <h1 >PELIO</h1>
+                <h2 >PELIO</h2>
             </div>
             <i class="fa-solid fa-bars" id="btn"></i>
         </div>
@@ -64,7 +64,119 @@
             <p>Made by ❤️  Md Shamim Hossain</p>
         </div>
     </section>
+    <main id="main">
+<header>
+    <div class="dash"></div>
+    <div class="input_place">
+        <input type="text" placeholder="Search here...">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="acount">
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-envelope"></i>
+        <div class="your_photo"></div>
+        <div class="name_place">
+            <div class="name">Hi Shamim</div>
+            <div class="email">engshamim@gmail.com</div>
+        </div>
+        <i class="fa-solid fa-caret-down"></i>
+    </div>
 
+</header>
+<section class="cards">
+    <div class="card card1">
+        <div class="icon_place">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+        <div class="info">
+            <div class="sum">32,568</div>
+            <p>Total Invoices</p>
+        </div>
+    </div>
+    <div class="card card2">
+        <div class="icon_place">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div class="info">
+            <div class="sum">8,558</div>
+            <p>Paid Invoices</p>
+        </div>
+    </div>
+    <div class="card card3">
+        <div class="icon_place">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <div class="info">
+            <div class="sum">2,568</div>
+            <p>Unpaid Invoices</p>
+        </div>
+    </div>
+    <div class="card card4">
+        <div class="icon_place">
+            <i class="fa-solid fa-file-invoice"></i>
+        </div>
+        <div class="info">
+            <div class="sum">668</div>
+            <p>Total Invoices Sent</p>
+        </div>
+    </div>
+  
+</section>
+<section class="transactions_place">
+    <div class="transactions">
+        <h2>Latest Transactions</h2>
+    </div>
+    <div class="statistics">
+        <h2>Statistics</h2>
+        <div class="myChart">
+            <canvas id="myChart"></canvas>
+          </div>
+    </div>
+</section>
+<section class="balance_place">
+    <div class="balance">
+        <div class="card"></div>
+        <div class="trans">
+            <div>
+                <h3>Transactions</h3>
+                <p>5,793</p>
+            </div>
+            <div class="chart">
+                
+            </div>
+        </div>
+    </div>
+    <div class="details">
+
+        <h2>Balance Details</h2>
+        <div>
+            <p>Total Balance</p>
+               <h2>$221,478</h2> 
+        </div>
+        <div class="boxs">
+            <div class="box">
+                <p>Last Month</p>
+                <h2>$ 14,849</h2>
+            </div>
+            
+            <div class="box">
+                <p>Expenses</p>
+                <h2>$ 14,849</h2>
+            </div>
+            
+            <div class="box">
+                <p>Taxes</p>
+                <h2>$255.25</h2>
+            </div>
+            
+            <div class="box">
+                <p>Debt</p>
+                  <h2>$365,478</h2>
+            </div>
+        </div>
+    </div>
+    <div class="activity"></div>
+</section>
 </main>
     <script src="main.js"></script>
 </body>
