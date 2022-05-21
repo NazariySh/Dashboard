@@ -136,6 +136,7 @@ display: none;
     padding-top: 5rem;
     padding:  2rem 0 2rem 0;
     opacity: 0;
+   
 }
 .sidebar.active .info{
     opacity: 1;
@@ -282,7 +283,7 @@ color:  rgba(114, 117, 122, 1);
     
 }
 .card{
-    height: 149px;
+
 width: 340px;
 left: 395px;
 top: 180px;
@@ -293,7 +294,7 @@ display: flex;
 align-items: flex-start;
 justify-content: flex-start;
 
-padding: 2rem;
+padding: 1.5rem 1rem 1rem 1.5rem;
 }
 .card .icon_place{
     height: 45px;
@@ -316,6 +317,7 @@ border-radius: 10px;
     flex-direction: column;
     opacity: 1;
     padding: 0 2rem
+
     
 }
 .card .info .sum{
@@ -364,23 +366,167 @@ text-align: left;
 
 }
 .transactions_place .transactions{
-    flex: 5 1 15rem;
+    flex: 4 1 15rem;
     background-color: #fff;
     border-radius: 20px;
     padding: 2rem;
+}
+.transactions_place .transactions .amount_place{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 1rem 1rem 0;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.transactions_place .transactions .amount_place .color{
+    display: flex;
+    gap: 1rem;
+    height: 44px;
+width: 259px;
+left: 435px;
+top: 479px;
+border-radius: 5px;
+align-items: center;
+
+}
+.transactions_place .transactions .amount_place .color .blue{
+   background: rgba(14, 110, 255, 1);
+    ;
+    height: 42px;
+    width: 42px;
+    left: 435px;
+    top: 479px;
+    border-radius: 5px;
+    
+}
+.amount_place .color p{
+    color:  rgba(14, 110, 255, 1);
+    ;
+}
+.transactions_place .transactions .amount_place .color .yellow{
+    background: rgba(255, 191, 38, 1);
+
+    height: 42px;
+    width: 42px;
+    left: 435px;
+    top: 479px;
+    border-radius: 5px;
+}
+.transactions_place .transactions .amount_place .color .green{
+    background: rgba(0, 209, 113, 1);
+
+
+    height: 42px;
+    width: 42px;
+    left: 435px;
+    top: 479px;
+    border-radius: 5px;
+}
+.transactions_place .transactions .amount_place .color .red{
+    background: rgba(255, 104, 77, 1);
+
+
+
+    height: 42px;
+    width: 42px;
+    left: 435px;
+    top: 479px;
+    border-radius: 5px;
+}
+.amount_place .amount{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.amount_place .amount div p{
+    color: rgba(114, 117, 122, 1);
+
+}
+.amount_place .amount .box {
+ 
+    height: 42px;
+width: 42px;
+left: 834px;
+top: 479px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+.amount_place .amount .box.blue{
+    background: rgba(1, 190, 255, .2);
+
+}
+.amount_place .amount .box.blue i{
+    color: rgba(1, 190, 255, 1);
+}
+.amount_place .amount .box.yellow{
+    background: rgba(255, 186, 20, .2);
+
+
+}
+.amount_place .amount .box.yellow i{
+    color: rgba(255, 186, 20, 1);
+}
+.amount_place .amount .box.red{
+    background: rgba(255, 104, 77, .2);
+
+
+}
+.amount_place .amount .box.red i{
+    color:  rgba(255, 104, 77, 1);;
+}
+.amount_place .amount .box.green{
+    background: rgba(3, 182, 100, .2);
+
+
+}
+.amount_place .amount .box.green i{
+    color: rgba(3, 182, 100, 1);
+}
+.amount_place .minutes{
+    display: flex;
+    align-items: center;
+    
+}
+.amount_place .minutes p{
+color: rgba(114, 117, 122, 1);
+
+}
+.amount_place .dop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.amount_place .dop i{
+    font-size: 25px;
+    color:  rgba(169, 175, 184, 1);
+    ;
+    cursor: pointer;
 }
 .transactions_place .statistics{
     flex: 1 1 15rem;
     background-color: #fff;
     border-radius: 20px;
-    padding: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.transactions_place .statistics #myChart{
+   
+    width: 100%;
+    min-height: 50vh;
 }
 .balance_place{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2rem;
     padding: 1rem;
     min-height: 40vh;
+    max-height: 70vh;
 }
 .balance_place .balance{
     flex: 1 1 15rem;
@@ -393,7 +539,13 @@ text-align: left;
     width: 100%;
     background: linear-gradient(247.35deg, #936DFF 0%, #3ED1FF 100%);
     border-radius: 20px;
-    min-height: 35vh;
+    height: 301px;
+    width: 466px;
+    left: 395px;
+    top: 1004px;
+
+    
+
 
 }
 .balance_place .balance .trans{
@@ -441,7 +593,7 @@ text-align: left;
     background-color: #fff;
     border-radius: 20px;
     flex: 1 1 15rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
     gap: 2rem;
 }
 .balance_place .details h2{
@@ -487,7 +639,61 @@ text-align: left;
     border-radius: 20px;
     flex: 1 1 15rem;
 }
-.myChart{
+
+.scroll{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.scroll .navigation{
+display: flex;
+}
+.scroll .navigation .pagination{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+ 
+}
+.scroll .navigation .pagination li{
+
+    height: 44px;
+width: 44px;
+left: 1152px;
+top: 881px;
+border-radius: 10px;
+ border: 1px solid rgba(161, 161, 161, 1);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.scroll .navigation .pagination li a{
+    color: gray;
+    
+}
+.scroll .navigation .pagination li.active{
+    box-shadow: 0px 7px 15px 0px rgba(14, 110, 255, 0.3);
+
+    background: rgba(14, 110, 255, 1);
+       border: none;
+}
+.scroll .navigation .pagination li.active a{
+    color: #fff;
+}
+.activity{
+    padding: 2rem;
+    gap: 2rem;
+}
+.activity p{
+    color: gray;
+}
+#activityChart{
+    margin-top: 20px;
     width: 100%;
     height: 100%;
+    max-width: 500px;
+    max-height: 500px;
 }
+
+
+

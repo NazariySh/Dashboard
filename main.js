@@ -5,38 +5,71 @@ btn.onclick = ()=>{
     sidebar.classList.toggle('active');
  main.classList.toggle('active')
 }
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
+
+const mydata = {
+labels :  [
+        'Green',
+        'Red',
+        'Blue'
+      ],
+  datasets: [{
+    label: 'Over',
+    data: [165, 1380, 1381,],
+    backgroundColor: [
+      ' rgba(0, 209, 113, 1)',
+      'rgba(255, 104, 77, 1)',
+      'rgba(14, 110, 255, 1)',
+      
+    ],
+    borderColor: [
+      ' rgba(0, 209, 113, 1)',
+     
+      'rgba(255, 104, 77, 1)',
+      'rgba(14, 110, 255, 1)',
+      
+    ],
+  
+    borderWidth: 1
+  }]
+};
+const myconfig = {
     type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
+    data: mydata,
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
+      scales: {
+        y: {
+          beginAtZero: true
         }
-    }
-});
+      }
+    },
+  };
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    myconfig
+  );
+
+const data = {
+    labels: [
+      'Sun',
+      'Mon',
+      'Tue'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [300, 50, 100],
+      backgroundColor: [
+        'rgba(0, 209, 113, 1)',
+        'rgba(255, 104, 77, 1)',
+        'rgba(1, 190, 255, 1)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+  const config = {
+    type: 'doughnut',
+    data: data,
+  };
+const activityChart = new Chart(
+    document.getElementById('activityChart'),
+    config
+  );
