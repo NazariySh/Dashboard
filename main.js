@@ -5,7 +5,16 @@ btn.onclick = ()=>{
     sidebar.classList.toggle('active');
  main.classList.toggle('active')
 }
+let burger = document.getElementById('burger-menu')
+let sidebar2 = document.getElementById('sidebar2');
+burger.onclick = ()=>{
+    sidebar2.classList.toggle('fixed');
 
+
+}
+burger2.onclick = ()=>{
+    sidebar2.classList.remove('fixed');
+}
 const mydata = {
 labels :  [
         'Green',
@@ -73,3 +82,10 @@ const activityChart = new Chart(
     document.getElementById('activityChart'),
     config
   );
+
+
+let card = document.getElementById('card')
+  card.addEventListener('click', (e) =>{
+    card.classList.toggle('toggleCard') ;  
+    checkCards(e);
+ })
