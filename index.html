@@ -13,7 +13,24 @@
     
 </head>
 <body>
-   
+    <div class="wrap" id="wrap">
+        <div class="box">
+            <div class="inps">
+                <div class="row">
+               
+                <p >Name:</p>
+       <input type="text" id="inp1" class="inp" >
+       
+       <p>Password:</p>
+       <input type="text" id="inp2" class="inp" >
+   </div></div>
+       <div class="btns">
+       <button id="signin" class="btn">Sign In</button>
+       <button id="signup" class="btn">Sign Up</button>
+       </div>
+   </div>
+   </div>
+<div class="body">
     <section class="sidebar" id="sidebar">
         <div class="logo_content">
             <div class="logo">
@@ -131,10 +148,10 @@
     <div class="acount">
         <i class="fa-solid fa-bell"></i>
         <i class="fa-solid fa-envelope"></i>
-        <div class="your_photo"></div>
+        <div class="your_photo" id="photo"></div>
         <div class="name_place">
-            <div class="name">Hi Shamim</div>
-            <div class="email">engshamim@gmail.com</div>
+            <div class="name" id="userName">Hi Shamim</div>
+            <div class="email" id="email">engshamim@gmail.com</div>
         </div>
         <i class="fa-solid fa-caret-down"></i>
     </div>
@@ -146,7 +163,7 @@
             <i class="fa-solid fa-file-invoice-dollar"></i>
         </div>
         <div class="info">
-            <div class="sum">32,568</div>
+            <div class="sum" id="num1">32,568</div>
             <p>Total Invoices</p>
         </div>
     </div>
@@ -154,7 +171,7 @@
         <div class="icon_place">
             <i class="fa-solid fa-check"></i>   </div>
         <div class="info">
-            <div class="sum">8,558</div>
+            <div class="sum" id="num2">8,558</div>
             <p>Paid Invoices</p>
         </div>
     </div>
@@ -163,7 +180,7 @@
             <i class="fa-solid fa-circle-xmark"></i>
         </div>
         <div class="info">
-            <div class="sum">2,568</div>
+            <div class="sum" id="num3">2,568</div>
             <p>Unpaid Invoices</p>
         </div>
     </div>
@@ -172,7 +189,7 @@
             <i class="fa-solid fa-file-invoice"></i>
         </div>
         <div class="info">
-            <div class="sum">668</div>
+            <div class="sum" id="num4">668</div>
             <p>Total Invoices Sent</p>
         </div>
     </div>
@@ -320,20 +337,20 @@
             <div class="face">
           <h2>Balance</h2>
           <div class="sum">
-            <span>$ 4,929</span>
+            <span id="balanceNum">$ 4,929</span>
            <div class="card_number">  <div><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div> <div><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div> <div><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div> <div>3456</div> </div>
 
           </div>
           <div class="inform">
       <div class="date">
 
-        <p>Valid Thru</p>
+        <p >Valid Thru</p>
         <h3>03/23</h3>
       </div>
       <div class="name">
 
         <p>Name</p>
-        <h3>Jhon Doe</h3>
+        <h3 id="cardName">Jhon Doe</h3>
       </div>
 
 
@@ -409,13 +426,13 @@
     </div>
     <div class="activity">
         <p>Activity</p>
-        <h2>
+        <h2 id="activityNum">
             $ 48,284</h2>
             <canvas id="activityChart" ></canvas>
     </div>
 </section>
 </main>
-
+</div>   
     <script src="main.js"></script>
     
 </body>

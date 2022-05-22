@@ -5,13 +5,86 @@
     font-family: "Popins", sans-serif;
     
 }
-body{
+.body{
+    display: none;
     position: relative;
     min-height: 100vh;
     width: 100%;
-   
+   transition: all 1s;
     background: rgba(245, 245, 245, 1);
 }
+.wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1s;
+}
+
+.box{
+    width: 30%;
+    height: 60vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+.btns{
+    margin-top: 15px;
+    width: 40%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn{
+   width: 80px;
+   height: 40px;
+   border-radius: 5px;
+   border: 1px solid black;
+   background-color: #4bb544;
+   cursor: pointer;
+   }
+   
+   .inps{
+       width: 80%;
+       height: 15vh;
+      
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       
+      
+     
+   }
+   .row{
+    flex-direction: column;
+    display: flex;
+       align-items: flex-start;
+       justify-content: center;
+   }
+.inp{
+    width: 200px;
+    height: 5vh;
+    margin-top:5px ;
+    border-radius: 5px;
+    padding-left:10px ;
+    font-size: 18px;
+}
+
+
+p{
+font-size: 18px;
+
+
+}
+
+
 .sidebar{
     position: absolute;
     height: 100%;
