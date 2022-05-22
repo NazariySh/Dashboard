@@ -18,7 +18,7 @@ let sum2 = Math.floor(Math.random()*10000)
 let sum3 = Math.floor(Math.random()*10000)
 let sum4 = Math.floor(Math.random()*10000)
 let activitySum = Math.floor(Math.random()*50000)
-let avatar = document.getElementById('photo')
+
 let API = 'https://randomuser.me/api'
 fetch(API)
               .then((response) => {
@@ -26,10 +26,10 @@ fetch(API)
               })
               .then((data) =>{
                  console.log(data)
-                 avatar.style.backgroundImage = 'url(' + data.results[0].picture.large + ')';
+              
                     
-                  
-              })
+              
+           
 
       let user = {
       username: username,
@@ -45,10 +45,10 @@ fetch(API)
      sum3: sum3,
      sum4: sum4,
      activitySum: activitySum,
-     avatar: url(' + data.results[0].picture.large + '),
+     avatar: data.results[0].picture.large ,
 
       };
-      
+  
   
         localStorage.setItem(username , JSON.stringify(user))
 
@@ -56,7 +56,7 @@ fetch(API)
       
     
         
-         
+      })
          
   }
   
@@ -179,6 +179,7 @@ let password = document.getElementById('inp2').value;
  }else if(username == dat.username && password == dat.password){
          alert('Hello ' + username);
    let cardName = document.getElementById('cardName')
+   let avatar = document.getElementById('photo')
          wrap2.style.display = 'flex';
          wrap.style.display = 'none';
          data.datasets[0].data[0] = dat.activity1;
@@ -196,7 +197,7 @@ let password = document.getElementById('inp2').value;
          balanceNum.innerText = '  $'+dat.activitySum;
          email.innerText =  dat.username+ '@gmail.com';
          userName.innerText = 'Hi ' + dat.username;
-       
+         avatar.style.backgroundImage = dat.avatar;
  }else{
      alert('wrong password')
  }
