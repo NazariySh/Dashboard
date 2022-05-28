@@ -1,69 +1,214 @@
+let signUpPage = document.getElementById('signUpPage')
+let logUp = document.getElementById('logUp');
+let logIn = document.getElementById('logIn');
+let password = document.getElementById('password')
+let confirPassword = document.getElementById('confirPassword')
+let userName = document.getElementById('userName');
+let firsName = document.getElementById('firsName');
+let lastName = document.getElementById('lastName');
+let email = document.getElementById('email');
+let bdate = document.getElementById('bdate');
 let wrap = document.getElementById('wrap');
 let wrap2 = document.querySelector('.body');
-let username = document.getElementById('inp1').value;
-let password = document.getElementById('inp2').value;
-let photo = 
-    signup.onclick = function(){
-      let username = document.getElementById('inp1').value;
-  let password = document.getElementById('inp2').value;
 
-  let data1 = Math.floor(Math.random()*100)
-let data2 = Math.floor(Math.random()*(100-data1))
-let data3 = 100 - data1 - data2;
-let info1 = Math.floor(Math.random()*100)
-let info2 = Math.floor(Math.random()*100)
-let info3 = Math.floor(Math.random()*100)
-let sum1 = Math.floor(Math.random()*10000)
-let sum2 = Math.floor(Math.random()*10000)
-let sum3 = Math.floor(Math.random()*10000)
-let sum4 = Math.floor(Math.random()*10000)
-let activitySum = Math.floor(Math.random()*50000)
 
-let API = 'https://randomuser.me/api'
-fetch(API)
-              .then((response) => {
-                  return response.json();
-              })
-              .then((data) =>{
-                 console.log(data)
-              
-                    
-              
-           
-
-      let user = {
-      username: username,
-     password: password,
-     activity1: data1,
-     activity2: data2,
-     activity3: data3,
-     info1: info1,
-     info2: info2,
-     info3: info3,
-     sum1: sum1,
-     sum2: sum2,
-     sum3: sum3,
-     sum4: sum4,
-     activitySum: activitySum,
-     avatar: data.results[0].picture.large ,
-
-      };
-  
-  
-        localStorage.setItem(username , JSON.stringify(user))
-
-        alert('Користувач зареєстрований');
-      
-    
-        
-      })
-         
-  }
-  
      
     
+signUpPage.onclick = ()=>{
+  logIn.style.display = 'none';
+  logUp.style.display = 'flex';
+ 
+}
+dropbtn.onclick =()=>{
+  dropdown.classList.toggle('active')
+} 
 
 
+console.log(localStorage.getItem('users'))
+
+
+function getUsersValues(){
+  const storedValues = localStorage.getItem('users');
+  if(!storedValues){
+    let dataes = {
+      lists:[]
+    };
+ 
+    signUp.onclick = ()=>{
+      let API = 'https://randomuser.me/api'
+                    fetch(API)
+                                .then((response) => {
+                                    return response.json();
+                                })
+                                .then((data) =>{
+                                   console.log(data)
+      let data1 = Math.floor(Math.random()*100)
+      let data2 = Math.floor(Math.random()*(100-data1))
+      let data3 = 100 - data1 - data2;
+      let info1 = Math.floor(Math.random()*100)
+      let info2 = Math.floor(Math.random()*100)
+      let info3 = Math.floor(Math.random()*100)
+      let sum1 = Math.floor(Math.random()*10000)
+      let sum2 = Math.floor(Math.random()*10000)
+      let sum3 = Math.floor(Math.random()*10000)
+      let sum4 = Math.floor(Math.random()*10000)
+      let activitySum = Math.floor(Math.random()*50000)
+      
+     
+      
+       
+                     let user = {};
+                     user.avatar =  data.results[0].picture.large;
+                     user.name = firsName.value;
+                     user.lastName = lastName.value;
+                     user.userName = userName.value;
+                     user.mail = email.value;
+                     user.birthday = bdate.value;
+                     user.activity1 = data1,
+                     user.activity2 = data2,
+                     user.activity3 =  data3,
+                     user.info1 =  info1,
+                     user.info2 =  info2,
+                     user.info3 =  info3,
+                     user.sum1 =  sum1,
+                     user.sum2 =  sum2,
+                     user.sum3 =  sum3,
+                     user.sum4 =  sum4,
+                     user.activitySum =  activitySum;
+                   
+                 
+                               
+                              
+                                
+                             
+                     
+                     if(password.value === confirPassword.value){
+                         user.password = password.value;
+                         dataes.lists.push(user);
+                         user.allVisits =  []; 
+                         user.countVisits = 0;
+                         user.statistics = [3,4,1,5,6]
+                        
+                     
+                    
+                     
+                     
+                         alert("sign up seccess")
+                     
+                         console.log(dataes);
+                         localStorage.setItem('users', JSON.stringify(dataes))
+                     
+                         logIn.style.display = 'flex';
+                         logUp.style.display = 'none';
+                     }else{
+                         alert('confirm password false')
+                         password = ' ';
+                         confirPassword = '';
+                     }
+                     
+                     
+      
+      
+        
+        
+            
+       
+                    })
+      
+      }
+      
+  
+  
+   
+         
+  }else{
+    let dataes = JSON.parse(storedValues);
+    signUp.onclick = ()=>{
+      let API = 'https://randomuser.me/api'
+      fetch(API)
+                  .then((response) => {
+                      return response.json();
+                  })
+                  .then((data) =>{
+                     console.log(data)
+      let data1 = Math.floor(Math.random()*100)
+      let data2 = Math.floor(Math.random()*(100-data1))
+      let data3 = 100 - data1 - data2;
+      let info1 = Math.floor(Math.random()*100)
+      let info2 = Math.floor(Math.random()*100)
+      let info3 = Math.floor(Math.random()*100)
+      let sum1 = Math.floor(Math.random()*10000)
+      let sum2 = Math.floor(Math.random()*10000)
+      let sum3 = Math.floor(Math.random()*10000)
+      let sum4 = Math.floor(Math.random()*10000)
+      let activitySum = Math.floor(Math.random()*50000)
+      
+     
+       
+                     let user = {};
+                     user.name = firsName.value;
+                     user.lastName = lastName.value;
+                     user.userName = userName.value;
+                     user.mail = email.value;
+                     user.birthday = bdate.value;
+                     user.activity1 = data1,
+                     user.activity2 = data2,
+                     user.activity3 =  data3,
+                     user.info1 =  info1,
+                     user.info2 =  info2,
+                     user.info3 =  info3,
+                     user.sum1 =  sum1,
+                     user.sum2 =  sum2,
+                     user.sum3 =  sum3,
+                     user.sum4 =  sum4,
+                     user.activitySum =  activitySum;
+                  
+                    
+                                   user.avatar =  data.results[0].picture.large;
+                                  
+                                
+                     
+                     if(password.value === confirPassword.value){
+                      user.password = password.value;
+                      dataes.lists.push(user);
+                      user.allVisits =  []; 
+                      user.countVisits = 0;
+                      user.statistics = [3,4,1,5,6]
+                     
+                  
+                 
+                  
+                  
+                      alert("sign up seccess")
+                  
+                      console.log(dataes);
+                      localStorage.setItem('users', JSON.stringify(dataes))
+                  
+                      logIn.style.display = 'flex';
+                      logUp.style.display = 'none';
+                  }else{
+                      alert('confirm password false')
+                      password = ' ';
+                      confirPassword = '';
+                  }
+                  
+                             
+      
+                     
+      
+      
+        
+        
+            
+                })
+      
+      
+      }
+      
+    
+  }
+}
+getUsersValues();
 
 
 let btn = document.getElementById('btn');
@@ -106,7 +251,7 @@ labels :  [
       
     ],
   
-    borderWidth: 1
+    borderWidth: 0
   }]
 };
 const myconfig = {
@@ -162,44 +307,67 @@ let card = document.getElementById('card')
  })
 
 
- signin.onclick = function(){
+  signIn.onclick = ()=>{
+    let logUserName = document.getElementById('logUserName')
+    let logPassword = document.getElementById('logPassword')
+  
+  
+   let dat = JSON.parse(localStorage.getItem('users'));
+  
+   let isGoodPassword = false;
+    for(let i = 0; i < dat.lists.length; i++){
+     
+      if(dat.lists[i].userName === logUserName.value && dat.lists[i].password === logPassword.value){
       
-  let username = document.getElementById('inp1').value;
-let password = document.getElementById('inp2').value;
- let user = localStorage.getItem(username);
- let dat = JSON.parse(user);
+       
+        let name = document.getElementById('name')
+        let cardName = document.getElementById('cardName')
+        let photo = document.getElementById('photo')
+        let myEmail = document.getElementById('myEmail')
+        
+              wrap2.style.display = 'flex';
+              wrap.style.display = 'none';
+              data.datasets[0].data[0] = dat.lists[i].activity1;
+              data.datasets[0].data[1] = dat.lists[i].activity2;
+              data.datasets[0].data[2] = dat.lists[i].activity3;
+              mydata.datasets[0].data[0] = dat.lists[i].info1;
+              mydata.datasets[0].data[1] = dat.lists[i].info2;
+              mydata.datasets[0].data[2] = dat.lists[i].info3;
+              num1.innerText = dat.lists[i].sum1;
+              num2.innerText = dat.lists[i].sum2;
+              num3.innerText = dat.lists[i].sum3;
+              num4.innerText = dat.lists[i].sum4;
+              cardName.innerHTML = dat.lists[i].userName;
+              activityNum.innerText = '  $'+dat.lists[i].activitySum;
+              balanceNum.innerText = '  $'+dat.lists[i].activitySum;
+              myEmail.innerText =  dat.lists[i].mail;
+              name.innerText = 'Hi ' + dat.lists[i].userName;
+           
+              photo.style.backgroundImage = 'url('+dat.lists[i].avatar+')';
+              isGoodPassword = true;
+        }else{
+           isGoodPassword = false;
+           
+        }
+      }
+        if(isGoodPassword == false){
+          
+          
+          logPassword.value = '';
+          alert('wrong password')
+        }else{
+          console.log('good')
+         
+        }
+  
+   
+   
+       
+  
+       
+   
+    
+  }
+  
+  
 
- console.log(dat)
-
-
-
-
- if(user == null){
-     alert('wrong username')
- }else if(username == dat.username && password == dat.password){
-         alert('Hello ' + username);
-   let cardName = document.getElementById('cardName')
-   let avatar = document.getElementById('photo')
-         wrap2.style.display = 'flex';
-         wrap.style.display = 'none';
-         data.datasets[0].data[0] = dat.activity1;
-         data.datasets[0].data[1] = dat.activity2;
-         data.datasets[0].data[2] = dat.activity3;
-         mydata.datasets[0].data[0] = dat.info1;
-         mydata.datasets[0].data[1] = dat.info2;
-         mydata.datasets[0].data[2] = dat.info3;
-         num1.innerText = dat.sum1;
-         num2.innerText = dat.sum2;
-         num3.innerText = dat.sum3;
-         num4.innerText = dat.sum4;
-         cardName.innerText = dat.username;
-         activityNum.innerText = '  $'+dat.activitySum;
-         balanceNum.innerText = '  $'+dat.activitySum;
-         email.innerText =  dat.username+ '@gmail.com';
-         userName.innerText = 'Hi ' + dat.username;
-         avatar.style.backgroundImage = dat.avatar;
- }else{
-     alert('wrong password')
- }
-
-}

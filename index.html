@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,22 +13,89 @@
     
 </head>
 <body>
-    <div class="wrap" id="wrap">
-        <div class="box">
-            <div class="inps">
-                <div class="row">
+    <div class="container" id="wrap">
+        <div class="forms">
+            <div class="form " id="logUp">
+          
+                <span class="title">Sign up</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="First name" class="input" id="firsName">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    
+                </form>
+                <form action="#">
+                    <div class="input-field">
+                         <input type="text" placeholder="Last name" class="input" id="lastName">
+                    <i class="fa-regular fa-user"></i>
+                    </div>
+                   
+                </form>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Username" class="input" id="userName">
+                    <i class="fa-regular fa-user"></i>
+                    </div>
+                    
+                </form>
+                <form action="#">
+                    <div class="input-field">
+                         <input type="email" placeholder="Email" class="input" id="email">
+                    <i class="fa-regular fa-envelope"></i>
+                    </div>
+                   
+                </form>
+               <form action="#">
+                <div class="input-field">
+                         <input type="date" placeholder="Email" class="input" id="bdate">
+                         <i class="fa-regular fa-calendar-days"></i>
+                </div>
+               </form>
+               <form action="#">
+                <div class="input-field">
+                         <input type="password" placeholder="Password" class="input" id="password">
+                         <i class="fa-solid fa-lock"></i>
+                </div>
+               </form>
+               <form action="#">
+                <div class="input-field">
+                         <input type="password" placeholder="Confirm password" class="input" id="confirPassword">
+                         <i class="fa-solid fa-lock"></i>
+                </div>
+               </form>
                
-                <p >Name:</p>
-       <input type="text" id="inp1" class="inp" >
-       
-       <p>Password:</p>
-       <input type="text" id="inp2" class="inp" >
-   </div></div>
-       <div class="btns">
-       <button id="signin" class="btn">Sign In</button>
-       <button id="signup" class="btn">Sign Up</button>
-       </div>
-   </div>
+                <div class="btn_place">
+                <button id="signUp" class="btn">Sign Up</button>
+               
+                </div>
+            </div>
+            <div class="form " id="logIn">
+          
+                <span class="title">Sign in</span>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Username" class="input" id="logUserName">
+                    <i class="fa-regular fa-user"></i>
+                    </div>
+                    
+                </form>
+               
+             
+               <form action="#">
+                <div class="input-field">
+                         <input type="password" placeholder="Password" class="input" id="logPassword">
+                         <i class="fa-solid fa-lock"></i>
+                </div>
+               </form>
+            
+               
+                <div class="btn_place">
+                <button id="signIn" class="btn">Sign In</button>
+                  <p>Not a member? <span id="signUpPage">Signup now</span></p>
+                </div>
+            </div>
+        </div>
    </div>
 <div class="body">
     <section class="sidebar" id="sidebar">
@@ -150,10 +217,18 @@
         <i class="fa-solid fa-envelope"></i>
         <div class="your_photo" id="photo"></div>
         <div class="name_place">
-            <div class="name" id="userName">Hi Shamim</div>
-            <div class="email" id="email">engshamim@gmail.com</div>
+            <div class="name" id="name">Hi Shamim</div>
+            <div class="email" id="myEmail">engshamim@gmail.com</div>
         </div>
-        <i class="fa-solid fa-caret-down"></i>
+       
+        <div class="dropdown" id="dropdown">
+            <button class="dropbtn" id="dropbtn"><i class="fa-solid fa-caret-down"></i></button>
+            <div class="dropdown-content" id="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#" class="active">Link 3</a>
+            </div>
+          </div>
     </div>
 
 </header>
