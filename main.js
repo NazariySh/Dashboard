@@ -10,9 +10,10 @@ let email = document.getElementById('email');
 let bdate = document.getElementById('bdate');
 let wrap = document.getElementById('wrap');
 let wrap2 = document.querySelector('.body');
-let registration = document.getElementById('registration');
+let registration = document.getElementById('registration')
 let settings = document.getElementById('settings');
 let logout = document.getElementById('logout');
+let photoyour = document.getElementById('photoURL')
 registration.onclick = ()=>{
   wrap2.style.display = 'none';
   wrap.style.display = 'flex';
@@ -37,7 +38,7 @@ dropbtn.onclick =()=>{
 console.log(localStorage.getItem('users'))
 
 function signUPValues(dataes){
- 
+  
       let data1 = Math.floor(Math.random()*100)
       let data2 = Math.floor(Math.random()*(100-data1))
       let data3 = 100 - data1 - data2;
@@ -54,7 +55,7 @@ function signUPValues(dataes){
       
        
                      let user = {};
-                  
+                    
                      user.name = firsName.value;
                      user.lastName = lastName.value;
                      user.userName = userName.value;
@@ -71,18 +72,17 @@ function signUPValues(dataes){
                      user.sum3 =  sum3,
                      user.sum4 =  sum4,
                      user.activitySum =  activitySum;
-                   
-                     fetch('https://randomuser.me/api')
-                                 .then((response) => {
-                                     return response.json();
-                                 })
-                                 .then((data) =>{
-                                    console.log(data)
-                                    user.avatar =  data.results[0].picture.large;
+                    user.avatar = photoyour.value;
+                    //  let API ='https://randomuser.me/api'
+                    //  fetch(API)
+                    //              .then((response) => {
+                    //                  return response.json();
+                    //              })
+                    //              .then((data) =>{
+                    //                 console.log(data)
                               
-                    })
-                                
-                             
+                    //                 user.avatar =  data.results[0].picture.large;
+                    //               })
                      
                      if(password.value === confirPassword.value){
                          user.password = password.value;
@@ -97,7 +97,7 @@ function signUPValues(dataes){
                      
                          alert("sign up seccess")
                      
-                        //  console.log(dataes);
+                         console.log(dataes);
                          localStorage.setItem('users', JSON.stringify(dataes))
                      
                          logIn.style.display = 'flex';
@@ -115,6 +115,7 @@ function signUPValues(dataes){
         
             
        
+                  
       
 }
 function getUsersValues(){
@@ -253,7 +254,7 @@ let card = document.getElementById('card')
      
       if(dat.lists[i].userName === logUserName.value && dat.lists[i].password === logPassword.value){
       
-        isGoodPassword = true;
+       
         let name = document.getElementById('name')
         let cardName = document.getElementById('cardName')
         let photo = document.getElementById('photo')
@@ -278,21 +279,22 @@ let card = document.getElementById('card')
               name.innerText = 'Hi ' + dat.lists[i].userName;
            
               photo.style.backgroundImage = 'url('+dat.lists[i].avatar+')';
-              logUserName.value = '';
-              logPassword.value = '';
             
+              isGoodPassword = true;
+              logUserName.value ="";
+              logPassword.value=""
         }else{
            isGoodPassword = false;
            
         }
       }
-        if(isGoodPassword == true){
+        if(isGoodPassword == false){
           
           
           logPassword.value = '';
           alert('wrong password')
         }else{
-          console.log('good entrance')
+          console.log('good')
          
         }
   
